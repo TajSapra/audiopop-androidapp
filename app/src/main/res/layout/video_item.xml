@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/video_item"
+    android:layout_margin="2dp">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="112dp"
+        android:layout_height="62dp"
+        android:id="@+id/img_thumbnail"
+        app:cardCornerRadius="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/thumbnail"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_duration"
+            android:text="4:06"
+            android:background="#111"
+            android:padding="4dp"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="5dp"/>
+
+    </androidx.cardview.widget.CardView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_file_name"
+        android:text="FileName"
+        android:textColor="#fff"
+        android:layout_toEndOf="@id/img_thumbnail"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_file_name"
+        android:text="Author:User"
+        android:textColor="#fff"
+        android:layout_toRightOf="@id/img_thumbnail"
+        android:layout_marginLeft="15dp"/>
+    
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/options"
+        android:id="@+id/menu_more"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
